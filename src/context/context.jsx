@@ -6,6 +6,7 @@ import {
   HANDLE_SEARCH,
   REMOVE_STORIES,
 } from "../actions"
+import reducer from "../reducer/reducer"
 
 const AppContext = React.createContext()
 
