@@ -1,11 +1,11 @@
 import React from "react"
 import { useGlobalContext } from "../context/context"
-
+import { Loading } from "../components"
 const Stories = () => {
   const { loading, hits, removeStory } = useGlobalContext()
 
   if (loading) {
-    return <h2>Loading...</h2>
+    return <Loading />
   }
 
   return (
