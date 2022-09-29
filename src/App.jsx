@@ -1,7 +1,12 @@
+import { Navbar, SearchForm, Buttons, Stories } from "./components"
+
 function App() {
-  return(
+  return (
     <>
-    <h1>hello</h1>
+      <Navbar />
+      <SearchForm />
+      <Buttons />
+      <Stories />
     </>
   )
 }
