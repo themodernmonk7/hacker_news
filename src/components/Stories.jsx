@@ -2,7 +2,7 @@ import React from "react"
 import { useGlobalContext } from "../context/context"
 
 const Stories = () => {
-  const { loading, hits } = useGlobalContext()
+  const { loading, hits, removeStory } = useGlobalContext()
 
   if (loading) {
     return <h2>Loading...</h2>
@@ -11,7 +11,6 @@ const Stories = () => {
   return (
     <section className="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-6 mt-2 xl:grid-cols-3 p-10  ">
       {hits.map((story) => {
-        console.log(story)
         const { objectID, title, num_comments, url, points, author } = story
         return (
           <article
@@ -32,7 +31,10 @@ const Stories = () => {
               >
                 Read more
               </a>
-              <button className=" rounded-sm uppercase hover:text-red-600">
+              <button
+                className=" rounded-sm uppercase hover:text-red-600"
+                onClick={() => removeStory(objectID)}
+              >
                 remove
               </button>
             </div>
