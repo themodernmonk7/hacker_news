@@ -9,13 +9,13 @@ const Stories = () => {
   }
 
   return (
-    <section className="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-6 mt-2 xl:grid-cols-3 p-10  ">
+    <section className="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-6 mt-2  p-10 max-w-5xl ">
       {hits.map((story) => {
         const { objectID, title, num_comments, url, points, author } = story
         return (
           <article
             key={objectID}
-            className=" bg-slate-800 px-8 py-4 rounded-sm shadow-md mx-auto "
+            className=" bg-slate-800 px-4 py-6 w-full rounded-sm shadow-md mx-auto "
           >
             <h4 className="text-white font-semibold tracking-wide">{title}</h4>
             <p className="text-gray-400 mt-1">
